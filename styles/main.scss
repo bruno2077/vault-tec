@@ -1,0 +1,101 @@
+@import "navbar";
+@import "heroSection";
+@import "vaults";
+@import "gallery";
+@import "signUp";
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;    
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    h3 {
+        @extend %titles;
+    }
+}
+
+// Títulos
+%titles {    
+    text-align: center;
+    color: $tertiary;
+    font-size: 2rem;
+}
+
+// Botões modo claro ou escuro
+@mixin btns($lightTheme: true) {
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 16px 20px;
+    border: none;
+    outline: none;    
+    
+    position: relative; // devido o efeito abaixo
+    transition: all 0.3s;
+    
+    @if $lightTheme {
+        background-color: $primaryLight;
+        color: $light;
+    } @else {
+        background-color: $secondary;
+        color: $dark;
+    }
+
+    &:hover {
+        a {
+            color: $light;
+        }        
+    }  
+    
+    a {
+        position: relative; // devido o efeito abaixo
+        z-index: 2; // devido o efeito abaixo
+        text-decoration: none;
+        @if $lightTheme {
+            color: $light;
+        } @else {
+            color: $dark;
+        }
+    }
+
+    // Efeito quando hover no botão
+        &:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: $tertiary;
+            transition: all 0.5s;            
+        }
+        &:hover:after {
+            width: 100%;
+        }
+    //end
+}
+
+// Toggle essas classes no body pra mudar de tema.
+.light {
+    background-color: $light;
+    color: $dark;
+    .btn {
+        @include btns(true);
+    }
+    .icon {
+        color: $dark;
+    }
+}
+.dark {
+    background-color: $primaryDark;
+    color: $light;
+    .btn {
+        @include btns(false);
+    }
+    .icon {
+        color: $secondary;
+    }
+}

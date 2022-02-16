@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <title>Vault-Tec</title>
+</head>
+<body class="light">
+    
+    <nav class="navbar">
+        <a href="/">
+            <img class="navbarLogo" src="./assets/imgs/logo.png" alt="Vault-tec logo">
+        </a>        
+
+        <div class="navbarBarsIcon">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <ul class="navbarMenu">
+            <li>
+                <a href="/" class="navbarLinks">Home</a>
+            </li>
+            <li>
+                <a href="/" class="navbarLinks">Vaults</a>
+            </li>
+            <li>
+                <a href="/" class="navbarLinks">Galeria</a>
+            </li>
+            <li>
+                <button class="btn"><a href="/">Inscreva-se</a></button>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="heroContainer">
+            <div class="heroContainerLeft">
+                <h1>Ataque nuclear?</h1>
+                <h2>Proteja sua família agora!</h2>
+                <p>Com um abrigo nuclear (Vault) da Vault-tec corporation</p>
+                <button class="btn">
+                    <a href="/">Inscreva-se</a>
+                </button>
+            </div>
+
+            <div class="heroContainerRight">
+                <img src="./assets/imgs/vaultboy.png" alt="Vault Boy fazendo joinha" class="heroContainerImg">
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Vaults -->
+    <div class="vaults">
+        <h3>Prepare-se para o futuro</h3>
+        <img src="./assets/imgs/bg1.png" alt="Fila de pessoas entrando em um Vault">
+        <div class="vaultInfos">            
+            <div class="info">
+                <div class="infoIcon icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <div>
+                    <h4>Capacidade de até 1000 pessoas</h4>
+                    <div>
+                        <p>
+                            Espere pelo término do apocalipse com sua família e amigos em uma comunidade Vault-tec.
+                        </p>
+                        <p>
+                            Vaults protegerão você e seus entes queridos por até 900 anos, se necessário.
+                        </p>
+                    </div>
+                </div>
+            </div>            
+            <div class="info">
+                <div class="infoIcon icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <div>
+                    <h4>Paredes de concreto com 1,5m de espessura</h4>
+                    <div>
+                        <p>
+                            Incluindo papel de parede decorativo, quartos temáticos, e sistema de ventilação de ar fresco e limpo.
+                        </p>
+                        <p>
+                            Aqueles com talentos nas artes, como música, podem ser admitidos em vaults especiais mediante aprovação do seu pedido.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Galeria -->
+    <div class="gallery">
+        <h3>Galeria</h3>
+        <h4>Onde você estará quando as bombas atômicas caírem?</h4>
+        <div class="images">
+            <div class="imgCol">
+                <img src="./assets/imgs/interior1.jpg" alt="">
+                <img src="./assets/imgs/interior1-2.jpg" alt="">
+            </div>
+            <div class="imgCol">
+                <img src="./assets/imgs/interior2.jpg" alt="">
+                <img src="./assets/imgs/interior2-2.jpg" alt="">
+            </div>
+            <div class="imgCol">
+                <img src="./assets/imgs/interior3.jpg" alt="">
+                <img src="./assets/imgs/interior3-2.jpg" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Formulário -->
+    <div class="signUp">        
+        <h3>Inscreva-se agora!</h3>
+        <h4>Reserve um lugar pra você e sua família em um Vault hoje mesmo.</h4>
+        <div class="form">
+            <div class="formItem">
+                <label for="name">Nome</label>
+                <input type="text" id="name">
+            </div>
+
+            <div class="formItem">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf">                
+            </div>
+
+            <div class="formItem">
+                <label for="email">E-mail</label>
+                <input type="text" id="email">
+            </div>
+
+            <div class="formItem">
+                <label for="cep">CEP</label>
+                <input type="number" id="cep">                
+            </div>
+
+            <div class="formItem">
+                <label for="family">Família</label>
+                <div>
+                    <select id="family">
+                        <option value="1">1 pessoa</option>
+                        <option value="2">2 pessoas</option>
+                        <option value="3">3 pessoas</option>
+                        <option value="4">4 pessoas</option>
+                        <option value="5">5 pessoas</option>
+                        <option value="6">6 pessoas</option>
+                        <option value="7">7 pessoas</option>
+                        <option value="8">8 pessoas</option>
+                        <option value="0">9 pessoas ou mais</option>
+                    </select>
+                    <br/><span>Animais de estimação e robôs não são permitidos.</span>
+                </div>
+            </div>
+
+            <button class="btn">Enviar</button>
+        </div>
+        <p>Dúvidas? Para maiores informações ligue: 0800-4-VAULTTEC</p>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div>
+            
+        </div> 
+
+        <div>
+
+        </div> 
+    </footer>
+</body>
+</html>

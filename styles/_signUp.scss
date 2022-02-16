@@ -1,0 +1,53 @@
+.signUp {
+    font-size: 1.2rem;
+    h3 {
+        margin: 40px 0px;
+    }
+    h4 {
+        margin-bottom: 40px;
+        text-align: center;
+        font-size: 1.6rem;
+    }
+    .form {
+        padding-left: 200px;
+        @include tablet {
+            padding-left: 100px;
+        }
+        @include mobile {
+            padding-left: 8px;
+        }
+    }
+    .formItem {
+        display: flex;
+        align-items: center;
+        padding: 20px 0px;
+        label {
+            width: 100px;
+        }
+        span {
+            font-size: 0.7rem;
+            opacity: 0.8;
+        } 
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+            label {
+                width: auto;
+            }           
+        }
+    }
+}
+
+// Esconder as setas dos input:number
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+//end
