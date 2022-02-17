@@ -3,19 +3,7 @@
 @import "vaults";
 @import "gallery";
 @import "signUp";
-
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;    
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    h3 {
-        @extend %titles;
-    }
-}
+@import "footer";
 
 // Títulos
 %titles {    
@@ -50,7 +38,7 @@ body {
         }        
     }  
     
-    a {
+    a {        
         position: relative; // devido o efeito abaixo
         z-index: 2; // devido o efeito abaixo
         text-decoration: none;
@@ -78,17 +66,39 @@ body {
     //end
 }
 
-// Toggle essas classes no body pra mudar de tema.
-.light {
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;    
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
     background-color: $light;
     color: $dark;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     .btn {
         @include btns(true);
     }
     .icon {
         color: $dark;
     }
+    
+    h3 {
+        @extend %titles;
+    }
 }
+
+// Toggle essa classe no body pra mudar de tema.
 .dark {
     background-color: $primaryDark;
     color: $light;

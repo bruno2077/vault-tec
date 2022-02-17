@@ -40,6 +40,7 @@
                 color: $tertiary; 
             }            
             h1, h2 {
+                margin-bottom: 30px;
                 font-size: 3rem;
                 @include tablet {
                     font-size: 2.5rem;

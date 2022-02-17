@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     position: sticky;
+    z-index: 10;
     top: 0;
     width: 100%;
 
@@ -39,7 +40,7 @@
     .navbarMenu { // ul
         @extend %align-center;
         list-style: none;
-        margin-right: 32px;
+        margin-right: 24px;
 
         @include tablet {
             display: none;
@@ -59,11 +60,56 @@
         }
 
         .btn {
-            margin-left: 20px;
+            margin: 0px 20px;
             background-color: $secondary;
             a {
                 color: $dark;                
             }           
         }
+    }
+}
+
+// btn theme toggler
+.toggle {
+    display: flex;
+    align-items: center;
+
+    input[type=checkbox] {
+        display: none;
+    }
+  
+    label {        
+        background-color: $light;
+        border: 2px solid #444;
+        border-radius: 50px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: all ease-in-out 0.3s;
+        width: 60px;
+        height: 30px;
+
+        &::after{
+            background-color: #4A7CB7;
+            border-radius: 50%;
+            content: ' ';
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            transition: all ease-in-out 0.3s;
+            width: 22px;
+            height: 22px;
+        }
+    }     
+  
+    input[type=checkbox]:checked ~ label {
+        background-color: #777;        
+    }
+  
+    input[type=checkbox]:checked ~ label::after {
+        background-color: $light;
+        transform: translateX(30px);
     }
 }
