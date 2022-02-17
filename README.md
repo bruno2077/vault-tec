@@ -1,6 +1,6 @@
 <div align="center">
     <a href="" >
-      <img src="./assets/imgs/vaultboy.png" style="max-width: 200px;"alt="Vault-tec">
+      <img src="./assets/imgs/vaultboy.png" style="width: 200px;"alt="Vault-tec">
     </a>
 
 # Vault-tec
