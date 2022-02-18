@@ -63,7 +63,10 @@
             margin: 0px 20px;
             background-color: $secondary;
             a {
-                color: $dark;                
+                color: $dark;
+                &:hover {
+                    color: $light;
+                }
             }           
         }
     }
